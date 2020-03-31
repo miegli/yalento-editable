@@ -5,9 +5,13 @@ Yalento editable is a new approach to a "zero configuration semantic content edi
 Insert the `*yalentoEditable` directive into any Angular component and you can edit and save all content within the element via wysiwyg. You don't need any placeholders or other adjustments to your template. The directive automatically recognizes the position of the adjusted content and can load it again at the right place at any time - and all that with realtime support thanks to google firebase.
 
 Installation:
-- Create an firebase project
+- Create a firebase project
 - Create an angular 9+ project
-- Add the npm library `ng add yalento-editable`
+- Add the npm library `npm add yalento-editable`
+- Add peer dependencies:
+     - `npm add @angular/fire`
+     - `npm add @angular/fire/firestore`
+     - `npm add yalento`
 
 Now import the YalentoEditableModule by initializing it with your firebase credentials:
  
@@ -15,7 +19,7 @@ Now import the YalentoEditableModule by initializing it with your firebase crede
 @NgModule({  
  imports: [
     YalentoEditableModule.initializeApp({ 
-        apiKey: "**,
+        apiKey: "**",
         authDomain: "**.firebaseapp.com", 
         databaseURL: "https://**.firebaseio.com", 
         projectId: "**", 

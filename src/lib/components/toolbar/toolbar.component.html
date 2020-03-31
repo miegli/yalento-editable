@@ -1,4 +1,4 @@
 <div class="yalento-toolbar" *ngIf="changesCount$ | async">
-  <button class="btn btn-primary" (click)="save()" [disabled]="isProcessing$ | async">Save</button>
-  <button class="btn btn-outline-danger" (click)="discardAll()" [disabled]="isProcessing$ | async">Discard</button>
+  <button class="yalento-toolbar-btn yalento-toolbar-btn-primary" (click)="save()" [disabled]="isProcessing$ | async">Save</button>
+  <button class="yalento-toolbar-btn yalento-toolbar-btn-danger" (click)="discardAll()" [disabled]="isProcessing$ | async">Discard</button>
 </div>
